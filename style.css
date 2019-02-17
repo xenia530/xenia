@@ -4235,7 +4235,7 @@ nav.main-navigation ul li:hover > ul {
   opacity: 1;
   z-index: 2;
 }
-
+/*
 .blog-item.sticky::before {
   content: "\f08d";
   font-family: 'fontAwesome';
@@ -4255,7 +4255,7 @@ nav.main-navigation ul li:hover > ul {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   z-index: 5;
 }
-
+*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .blog-item {
     padding: 15px;
@@ -4485,6 +4485,9 @@ nav.main-navigation ul li:hover > ul {
   .boxed-layout {
     max-width: 480px;
   }
+}
+.portfolios-wrapper{
+  height: 1105.73px !important;
 }
 
 /*****************************************/

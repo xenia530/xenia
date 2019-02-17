@@ -27,7 +27,20 @@
 	<!-- Custom Styles -->
 	<link rel="stylesheet" href="css/custom.css">
 </head>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/portfolio-list.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			const portfolioIndexList = portfolioList.slice(0,9)
+			for(var i = 0;i<portfolioIndexList.length;i++){
+				$('.portfolios-list-content').append(
+					"<div class='col-lg-4 col-md-6 col-12 portfolio-item "+portfolioIndexList[i].category+"'><a href='portfolio-detail.html?id="+i+"'><div class='portfolio'><div class='portfolio-image'><img src='"+portfolioIndexList[i].img+"' alt='portfolio image'></div><div class='portfolio-content'> <h5>"+portfolioIndexList[i].title+"</h5><h6>"+portfolioIndexList[i].type+"</h6></div></div></a></div>"
 
+				)
+			}
+			
+		})
+		</script>
 <body>
 	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -61,6 +74,7 @@
                                 </li>
 								<li><a href="about.html">关于我</a></li>
                                 <li><a href="portfolio.html">作品集</a> 
+                               <!--  <li><a href="blog.html">博客</a>  -->
                                 </li> 
 							</ul>
 						</nav>
@@ -137,7 +151,7 @@
 		<footer class="footer-area bg-white">
 			<div class="container">
 				<ul class="footer-inner">
-					<li>现居城市 <br>上海</li>
+					<li>现居城市 <br>杭州</li>
 					<li><a href="tel://+86 15757181015">+86 15757181015</a></li>
 					<li><a href="mailto://15757181015@163.com">15757181015@163.com</a></li>
 					<li>Copyright © 2018 <a href="http://www.xenia530.com/" target="_blank" title="xenia530">xenia530.com</a></li>
@@ -156,19 +170,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="js/portfolio-list.js"></script>
-	<script type="text/javascript">
-		$(function(){
-		const portfolioIndexList = portfolioList.slice(0,9)
-		for(var i = 0;i<portfolioIndexList.length;i++){
-			$('.portfolios-list-content').append(
-				"<div class='col-lg-4 col-md-6 col-12 portfolio-item "+portfolioIndexList[i].category+"'><a href='portfolio-detail.html?id="+i+"'><div class='portfolio'><div class='portfolio-image'><img src="+portfolioIndexList[i].img+" alt='portfolio image'></div><div class='portfolio-content'> <h5>"+portfolioIndexList[i].title+"</h5><h6>"+portfolioIndexList[i].type+"</h6></div></div></a></div>"
-			)
-		}
-		
-	})
-	</script>
+	
 </body>
 
 
